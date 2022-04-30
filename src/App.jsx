@@ -2,10 +2,12 @@ import { useEffect, useState } from 'react';
 import { QuizPage } from './pages/QuizPage';
 import './base.css';
 import './app.css';
+import { Navigation } from './components/navigation/Navigation';
 
 function App() {
   const [cards, setCards] = useState([]);
   const [bookmarks, setBookmarks] = useState([]);
+  const [activePage, setActivePage] = useState('questions');
 
   useEffect(() => {
     const url =
@@ -18,11 +20,21 @@ function App() {
   return (
     <div className="App">
       <h1>Movie Quiz</h1>
-      <QuizPage
-        cards={cards}
-        bookmarks={bookmarks}
-        setBookmarks={setBookmarks}
-      />
+      {activePage === 'questions' && (
+        <QuizPage
+          cards={cards}
+          bookmarks={bookmarks}
+          setBookmarks={setBookmarks}
+        />
+      )}
+      {activePage === 'bookmarks' && (
+        <QuizPage
+          cards={bookmarks}
+          bookmarks={bookmarks}
+          setBookmarks={setBookmarks}
+        />
+      )}
+      <Navigation activePage={activePage} setActivePage={setActivePage} />
     </div>
   );
 }
