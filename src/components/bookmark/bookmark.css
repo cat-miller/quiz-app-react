@@ -1,0 +1,15 @@
+.bookmark__button {
+  width: 3rem;
+  color: violet;
+  fill: currentcolor;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  position: absolute;
+  top: -1.8rem;
+  right: 1.5rem;
+}
+
+.bookmark__button--bookmarked {
+  color: black;
+}

@@ -5,6 +5,7 @@ export function Answer({ onChange, answer }) {
         onChange={() => onChange(answer)}
         value={answer}
         type="radio"
+        name="answer"
       ></input>
       {answer}
     </label>

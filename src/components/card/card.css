@@ -1,0 +1,37 @@
+.easy {
+  background-color: aquamarine;
+}
+
+.medium {
+  background-color: papayawhip;
+}
+
+.hard {
+  background-color: lightcoral;
+}
+
+.card {
+  border: 2px solid black;
+  border-radius: 15px;
+  display: grid;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+  position: relative;
+}
+
+.card__form {
+  display: grid;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 0 1rem;
+}
+
+.card__form--answer-button {
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 0.5rem 0;
+  margin-top: 1rem;
+  justify-self: center;
+  width: 10rem;
+}
