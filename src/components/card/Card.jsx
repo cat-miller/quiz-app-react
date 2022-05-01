@@ -62,8 +62,7 @@ export function Card({ cardValues, bookmarks, setBookmarks }) {
       )}
       {isRevealed && (
         <p>
-          {`You chose "${givenAnswer}". The correct answer is "${correctAnswer}`}
-          "
+          {`You chose "${givenAnswer}". The correct answer is "${correctAnswer}"`}
         </p>
       )}
     </article>

@@ -1,12 +1,13 @@
+import { NavigationEnumeration } from '../../enumerations/Navigation';
 import './navigation.css';
 
 export function Navigation({ activePage, setActivePage }) {
   return (
     <nav className="navigation">
       <button
-        onClick={() => setActivePage('questions')}
+        onClick={() => setActivePage(NavigationEnumeration.QUESTIONS)}
         className={
-          activePage === 'questions'
+          activePage === NavigationEnumeration.QUESTIONS
             ? 'navigation__button navigation__button--active'
             : 'navigation__button'
         }
@@ -14,9 +15,9 @@ export function Navigation({ activePage, setActivePage }) {
         Questions
       </button>
       <button
-        onClick={() => setActivePage('bookmarks')}
+        onClick={() => setActivePage(NavigationEnumeration.BOOKMARKS)}
         className={
-          activePage === 'bookmarks'
+          activePage === NavigationEnumeration.BOOKMARKS
             ? 'navigation__button navigation__button--active'
             : 'navigation__button'
         }
