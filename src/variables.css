@@ -1,0 +1,19 @@
+:root {
+  --background-color-page: #251166;
+  --background-color-heading: #251166;
+  --background-color-navigation-button: #251166;
+  --background-color-navigation-button-active: #5d42e2;
+  --background-color-card-easy: #e3bfe3;
+  --background-color-card-medium: #dd92de;
+  --background-color-card-hard: #e278e4;
+  --background-color-answer-button: #b50577;
+  --background-color-revealed-answer-false: #a042e2;
+  --background-color-revealed-answer-true: #b9fbc0;
+  --color-border-answer-button: #b50577;
+  --color-bookmark: #05b592;
+  --color-bookmark-bookmarked: #b50577;
+  --color-heading: #8cf8f4;
+  --color-navigation-button: #e256f8;
+  --color-card-form: #251166;
+  --color-answer-button: #8cf8f4;
+}

@@ -1,23 +1,23 @@
 .easy {
-  background-color: aquamarine;
+  background-color: var(--background-color-card-easy);
 }
 
 .medium {
-  background-color: papayawhip;
+  background-color: var(--background-color-card-medium);
 }
 
 .hard {
-  background-color: lightcoral;
+  background-color: var(--background-color-card-hard);
 }
 
 .card {
-  border: 2px solid black;
   border-radius: 15px;
   display: grid;
   justify-content: center;
   padding: 2rem;
   gap: 1rem;
   position: relative;
+  color: var(--color-card-form);
 }
 
 .card__form {
@@ -28,10 +28,12 @@
 }
 
 .card__form--answer-button {
-  border: 2px solid black;
+  border: 2px solid var(--color-border-answer-button);
   border-radius: 15px;
   padding: 0.5rem 0;
   margin-top: 1rem;
   justify-self: center;
   width: 10rem;
+  background-color: var(--background-color-answer-button);
+  color: var(--color-answer-button);
 }
