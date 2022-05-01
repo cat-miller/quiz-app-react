@@ -1,4 +1,18 @@
 .navigation {
   display: flex;
+  width: 100%;
+  height: 3rem;
   justify-content: space-evenly;
+}
+
+.navigation__button {
+  border: none;
+  width: 50%;
+  background-color: var(--background-color-navigation-button);
+  font-size: 1.25rem;
+  color: var(--color-heading);
+}
+
+.navigation__button--active {
+  background-color: var(--background-color-navigation-button-active);
 }

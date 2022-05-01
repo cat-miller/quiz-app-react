@@ -1,0 +1,8 @@
+@import url('./variables.css');
+@import url('./base.css');
+@import url('./app.css');
+@import url('./pages/quizPage.css');
+@import url('./components/navigation/navigation.css');
+@import url('./components/heading/heading.css');
+@import url('./components/card/card.css');
+@import url('./components/bookmark/bookmark.css');

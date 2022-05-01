@@ -40,7 +40,7 @@ export function Card({ cardValues, bookmarks, setBookmarks }) {
   function handleSubmit(event) {
     event.preventDefault();
     const isCorrect = givenAnswer === correctAnswer;
-    setResultColor(isCorrect ? 'green' : 'red');
+    setResultColor(isCorrect ? '#b9fbc0' : '#e05ce3');
     setIsRevealed(true);
   }
 

@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { QuizPage } from './pages/QuizPage';
-import './base.css';
-import './app.css';
+import './style.css';
 import { Navigation } from './components/navigation/Navigation';
 import { CategoriesEnumeration } from './enumerations/Categories';
 import { Heading } from './components/heading/Heading';
@@ -21,24 +20,28 @@ function App() {
   }, [category]);
 
   return (
-    <div className="App">
+    <div className="app">
       <Heading category={category} setCategory={setCategory}>
-        Quiz
+        {activePage === NavigationEnumeration.QUESTIONS
+          ? 'Questions'
+          : 'Bookmarks'}
       </Heading>
-      {activePage === NavigationEnumeration.QUESTIONS && (
-        <QuizPage
-          cards={cards}
-          bookmarks={bookmarks}
-          setBookmarks={setBookmarks}
-        />
-      )}
-      {activePage === NavigationEnumeration.BOOKMARKS && (
-        <QuizPage
-          cards={bookmarks}
-          bookmarks={bookmarks}
-          setBookmarks={setBookmarks}
-        />
-      )}
+      <div className="app__page">
+        {activePage === NavigationEnumeration.QUESTIONS && (
+          <QuizPage
+            cards={cards}
+            bookmarks={bookmarks}
+            setBookmarks={setBookmarks}
+          />
+        )}
+        {activePage === NavigationEnumeration.BOOKMARKS && (
+          <QuizPage
+            cards={bookmarks}
+            bookmarks={bookmarks}
+            setBookmarks={setBookmarks}
+          />
+        )}
+      </div>
       <Navigation activePage={activePage} setActivePage={setActivePage} />
     </div>
   );

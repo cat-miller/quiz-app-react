@@ -1,6 +1,6 @@
 .bookmark__button {
   width: 3rem;
-  color: violet;
+  color: var(--color-bookmark);
   fill: currentcolor;
   border: none;
   background-color: transparent;
@@ -11,5 +11,5 @@
 }
 
 .bookmark__button--bookmarked {
-  color: black;
+  color: var(--color-bookmark-bookmarked);
 }

@@ -1,4 +1,5 @@
 import { categoryOptions } from '../../enumerations/Categories';
+import './heading.css';
 
 export function Heading({ category, setCategory, children }) {
   function handleChange(event) {
@@ -7,25 +8,16 @@ export function Heading({ category, setCategory, children }) {
   }
 
   return (
-    <div>
+    <div className="heading">
       <h1>{children}</h1>
       <label>
         Choose a category:
-        <select onChange={handleChange}>
-          {categoryOptions.map(option => {
-            if (option.value === category) {
-              return (
-                <option key={option.value} value={option.value} selected>
-                  {option.label}
-                </option>
-              );
-            }
-            return (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            );
-          })}
+        <select value={category} onChange={handleChange}>
+          {categoryOptions.map(option => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
         </select>
       </label>
     </div>
